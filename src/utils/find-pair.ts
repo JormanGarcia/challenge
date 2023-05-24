@@ -1,19 +1,19 @@
 import { TFindPairReturn, TPairList } from "../types/utils";
 
 export function findMatchingPairs(list: TPairList, toMatch: number) {
-  const sumables = new Set();
+  const matchingList = new Set();
 
-  const data = list.reduce<TFindPairReturn>((prev, curr) => {
+  const matchingPairs = list.reduce<TFindPairReturn>((prev, curr) => {
     const matchingNumber = toMatch - curr;
 
-    if (sumables.has(matchingNumber)) {
+    if (matchingList.has(matchingNumber)) {
       console.log(curr, matchingNumber, toMatch);
       return [...prev, [curr, matchingNumber, toMatch]];
     }
 
-    sumables.add(curr);
+    matchingList.add(curr);
     return prev;
   }, []);
 
-  return data;
+  return matchingPairs;
 }
