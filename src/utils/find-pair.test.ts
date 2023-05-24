@@ -1,6 +1,6 @@
-import { findSumablePairs } from "./find-pair";
+import { findMatchingPairs } from "./find-pair";
 
-describe("findSumablePairs", () => {
+describe("findMatchingPairs", () => {
   test("should find and return valid sumable pairs", () => {
     const list = [2, 4, 5, 3, 6, 8];
     const result = 10;
@@ -10,7 +10,7 @@ describe("findSumablePairs", () => {
       [8, 2, result],
     ];
 
-    const pairs = findSumablePairs(list, result);
+    const pairs = findMatchingPairs(list, result);
 
     expect(pairs).toEqual(expectedPairs);
   });
@@ -25,7 +25,7 @@ describe("findSumablePairs", () => {
       [7, 5, result],
     ];
 
-    const pairs = findSumablePairs(list, result);
+    const pairs = findMatchingPairs(list, result);
 
     expect(pairs).toEqual(expectedPairs);
   });
@@ -34,7 +34,7 @@ describe("findSumablePairs", () => {
     const list = [1, 2, 3, 4, 5];
     const result = 10;
 
-    const pairs = findSumablePairs(list, result);
+    const pairs = findMatchingPairs(list, result);
 
     expect(pairs).toEqual([]);
   });

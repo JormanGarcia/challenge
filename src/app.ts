@@ -1,8 +1,8 @@
-import { findSumablePairs } from "./utils";
+import { findMatchingPairs } from "./utils";
 
 function run() {
-  const PairList = [2, 4, 5, 3, 6, 8];
-  findSumablePairs(PairList, 10);
+  const PairList = [1, 9, 5, 0, 20, -4, 12, 16, 7];
+  findMatchingPairs(PairList, 12);
 }
 
 run();
